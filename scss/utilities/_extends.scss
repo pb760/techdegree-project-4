@@ -1,0 +1,42 @@
+/* ============================================= */
+/*   	Extends   								 */
+/* ============================================= */
+%blockquote{
+	font-size: 1.5em;
+	font-weight: $font-weight--light;
+	font-style: italic;
+	margin-left: em(20px);
+	padding-left: em(20px);
+	border-left: em(8px) solid $color-primary;
+	border-radius: em(5px);	  
+}
+
+
+%btn {
+	margin-top: em(15px);
+	width: 100%;
+	color: $white;
+	border: none;
+	padding: em(10px) 0;
+	text-transform: uppercase;
+	border-radius: em(5px);
+	transition: background-color .5s ease-out;
+}
+
+%input{
+  display: block;
+  width: 94%;
+  margin: em(10px) auto 0;
+  border: none;
+  padding: em(10px);
+  border-bottom: em(5px) solid $color-primary;
+}
+
+%hidden {
+  position:absolute;
+  left: em(-10000px);
+  top:auto;
+  width:em(1px);
+  height:em(1px);
+  overflow:hidden;
+}

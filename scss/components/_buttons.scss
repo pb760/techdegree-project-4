@@ -1,0 +1,39 @@
+/* ============================================= */
+/*              Buttons                          */
+/* ============================================= */
+
+.btn {
+	@extend %btn;
+  
+	@include mq($mq-brkpoint){
+		padding: em(10px) em(30px);
+	}
+	& + & {
+		@include mq($mq-brkpoint){
+		margin-left: em(10px); 
+		}
+	} 
+}
+
+
+
+.default {
+	@include btn-style($default);
+}
+
+.error {
+  @include btn-style($error);
+}
+
+.info {
+  @include btn-style($info);
+}
+
+.success {
+  @include btn-style($success);
+}
+
+.warning {
+  @include btn-style($warning);
+}
+

@@ -1,0 +1,29 @@
+/* ============================================= */
+/*              Typography                       */
+/* ============================================= */
+
+* {
+  font-family: $font-family--primary;
+  color: $color-secondary;
+}
+
+.headline{
+	&-primary {
+		color: $color-primary;
+		margin-left: em(10px);
+	}
+
+	&-secondary {
+		font-weight: $font-weight--light;
+		color: $color-secondary;
+	}
+}
+
+.link {
+  color: $color-link;
+  font-weight: $font-weight--bold;
+}
+
+.blockquote {
+	@extend %blockquote;
+}

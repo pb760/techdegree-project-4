@@ -1,0 +1,81 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+/* Mixin for media query */
+
+@mixin mq($mq-brkpoint){
+	@media( min-width: $mq-brkpoint ){
+		@content;
+	}
+}
+
+
+/* Mixin for Grid map colors*/
+
+@mixin col-grid($map){
+  @each $grid, $color in $grid-colors{
+    &.col-#{$grid}{
+      background-color: $color;
+    }
+  }
+  @content;
+}
+
+/*Mixin for col-n flex-basis property*/
+
+@mixin columns($cols){
+  $col-val: $cols;
+  @for $i from 1 through $col-val{
+    .col-#{$i}{
+      flex-basis: percentage((1/$col-val)* $i);
+    }
+  }
+  @content;
+}
+
+
+/* Mixin for button background and hover property */
+
+@mixin btn-style($bg-color){
+	
+	$hov-color: lighten($bg-color,10%);
+	
+	background-color: $bg-color;
+  &:hover{
+	  background-color: $hov-color;
+  }
+	@content;
+}
+ 
+ /* Mixin for centering contents */
+  
+ @mixin center-element{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	@content;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

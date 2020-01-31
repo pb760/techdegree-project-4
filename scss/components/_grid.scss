@@ -1,0 +1,71 @@
+/* ============================================= */
+/*              Grid System                      */
+/* ============================================= */
+
+.container {
+  padding: 0 em(10px);
+  
+  @include mq($mq-brkpoint){
+	max-width: em(1400px);
+	@include center-element;  
+  }
+}
+
+
+.row {
+  display: flex;
+  flex-direction: column;
+  padding: 1em em(10px);
+  
+  @include mq($mq-brkpoint){
+	flex-direction: row;  
+  }
+}
+
+.centered {
+	@include mq($mq-brkpoint){
+		@include center-element;
+	}
+}
+
+[class^=col] {
+  margin-top: em(10px);
+  flex-basis: 100%;
+  min-height: em(25px);
+  padding: em(10px);
+  border-radius: em(5px);
+  
+  @include mq($mq-brkpoint){
+	display: flex;
+	justify-content: center;
+	margin-top: 0;
+	align-items: center;  
+  }
+  & + & {
+	@include mq($mq-brkpoint){
+		margin-left: em(10px);
+	}
+  }
+}
+
+
+
+
+ /* COLUMNS */
+
+
+.card {
+  flex-basis: 100%;
+}
+
+
+.theme{
+	@include col-grid($grid-colors);
+}
+
+
+@include mq($mq-brkpoint){
+  @include columns(12);
+}
+
+
