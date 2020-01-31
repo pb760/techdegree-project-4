@@ -39,7 +39,7 @@
 
 @mixin btn-style($bg-color){
 	
-	$hov-color: lighten($bg-color,10%);
+	$hov-color: lighten($bg-color,15%);
 	
 	background-color: $bg-color;
   &:hover{
